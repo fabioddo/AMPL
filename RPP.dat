@@ -1,0 +1,28 @@
+### INSIEMI 
+set RETTANGOLI := 1 2 3;
+
+### PARAMETRI 
+param w:=
+1	4
+2	2
+3	3
+;
+		
+param h:=	
+1	4
+2	5
+3	1
+;
+		
+param W :=9;
+
+
+
+
+
+
+
+
+
+
+

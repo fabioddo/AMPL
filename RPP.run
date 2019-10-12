@@ -1,0 +1,27 @@
+reset;
+option solver gurobi;
+model RPP.mod;
+data RPP.dat;
+var cont:=0;
+for {i in RETTANGOLI}{
+	if w[i]>W and h[i]>W then{
+		printf "il rettangolo %d non rispetta i vincoli\n",i;
+		let cont:=cont+1;
+	}
+}
+
+if cont == 0 then{
+	solve;
+	display h,w,x,y,rot,b,l>>RPP.out;
+	display W,H>>RPP.out;
+	close RPP.out;
+}
+else{
+	printf "\n### RIDURRE I PARAMETRI DI ALMENO UN LATO ###\n\n";
+	
+}
+
+
+
+
+
